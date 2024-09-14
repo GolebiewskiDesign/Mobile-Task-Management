@@ -1,31 +1,32 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet,  View,  FlatList, Button,Text, TextInput} from 'react-native';
 import {useState} from "react";
+import TaskInput from './components/TaskInput';
 
 
 
 export default function App() {
 
   const [modalVisible, setModalVisible] = useState(false);
-  const [courseGoals, setCourseGoals] = useState([]); 
+  const [task, setTask] = useState([]); 
 
 
-  function startAddGoalHandler(){
+  function startAddTaskHandler(){
     setModalVisible(true);
    }
 
-  function cancelAddGoalHandler(){
+  function cancelAddTaskHandler(){
     setModalVisible(false);
   }
 
-  function addGoalHandler(enteredGoalText){
-    setCourseGoals(currentCourseGoals => [...currentCourseGoals,{task: enteredGoalText, id:Math.random().toString()}])
-    cancelAddGoalHandler();
+  function addTaskHandler(enteredTask){
+    setTask(currentTask => [...currentTask,{task: enteredTask, id:Math.random().toString()}])
+    cancelAddTaskHandler();
   };
 
-  function deleteGoalHandler (id) {
-    setCourseGoals(currentCourseGoals=> {
-      return currentCourseGoals.filter((goal)=> goal.id !== id);
+  function deleteTaskHandler (id) {
+    setTask(currentTask=> {
+      return currentTask.filter((goal)=> goal.id !== id);
     });
   }
 
@@ -34,11 +35,11 @@ export default function App() {
     <>
       <StatusBar style="light" />
         <View style={styles.appContainer}>
-            <Button title="Add new Goal" color="cyan" onPress={startAddGoalHandler}  />
-            <TextInput placeholder="Type new Task" />
+            <Button title="Add new Goal" color="cyan" onPress={startAddTaskHandler}  />
+            <TaskInput taskHandler={addTaskHandler} visible={modalVisible} cancelTask={cancelAddTaskHandler} /> 
             <View style={styles.goalsContainer}>
               <FlatList 
-              data={courseGoals} 
+              data={task} 
               renderItem={(itemData)=>{
                 return(
                 <Text>Here will be the Task with {itemData.item.task}</Text>)
