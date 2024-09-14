@@ -1,20 +1,76 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet,  View,  FlatList, Button,Text, TextInput} from 'react-native';
+import {useState} from "react";
+
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
+  const [modalVisible, setModalVisible] = useState(false);
+  const [courseGoals, setCourseGoals] = useState([]); 
+
+
+  function startAddGoalHandler(){
+    setModalVisible(true);
+   }
+
+  function cancelAddGoalHandler(){
+    setModalVisible(false);
+  }
+
+  function addGoalHandler(enteredGoalText){
+    setCourseGoals(currentCourseGoals => [...currentCourseGoals,{task: enteredGoalText, id:Math.random().toString()}])
+    cancelAddGoalHandler();
+  };
+
+  function deleteGoalHandler (id) {
+    setCourseGoals(currentCourseGoals=> {
+      return currentCourseGoals.filter((goal)=> goal.id !== id);
+    });
+  }
+
+
+  return (
+    <>
+      <StatusBar style="light" />
+        <View style={styles.appContainer}>
+            <Button title="Add new Goal" color="cyan" onPress={startAddGoalHandler}  />
+            <TextInput placeholder="Type new Task" />
+            <View style={styles.goalsContainer}>
+              <FlatList 
+              data={courseGoals} 
+              renderItem={(itemData)=>{
+                return(
+                <Text>Here will be the Task with {itemData.item.task}</Text>)
+              }}
+              keyExtractor={(item,index)=>{
+                return item.id;
+              }}
+              alwaysBounceVertical={false} />
+            </View>
+            <View style={styles.footer}>
+                <Text>This is a footer</Text>
+            </View>
+      </View>
+    </>
+  );
+} 
+
+ 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  appContainer:{
+    flex:1,
+    paddingTop:50,
+    paddingHoriziontal:50,
   },
+  goalsContainer:
+  {
+    flex: 5,
+  },
+  footer:{
+    flex:1,
+    backgroundColor:'blue'
+  }
+
 });
+ 
