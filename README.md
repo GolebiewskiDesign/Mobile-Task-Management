@@ -1,5 +1,6 @@
 📝 Task Management App - React Native
 
+
 🇬🇧 
 This project is a simple task management application built using React Native. It allows users to add, view, and delete tasks through an intuitive interface.
 Users can open a modal to input a new task, which includes a text input field and buttons to either cancel or add the task. 
@@ -10,6 +11,7 @@ The application is designed with responsive layout considerations, ensuring that
 It uses React Native components like Modal, FlatList, and Pressable for building the user interface, and it manages the application state using React's useState hook. Expo is used for setting up and running the app during development. 
 The design emphasizes a clean, simple UI with easy-to-use task management functionality.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -28,6 +30,7 @@ Wykorzystuje komponenty React Native, takie jak Modal, FlatList i Pressable, do 
 Do tworzenia i uruchamiania aplikacji podczas rozwoju wykorzystano Expo. Projekt kładzie nacisk na prosty i przejrzysty interfejs użytkownika oraz łatwą w obsłudze funkcjonalność zarządzania zadaniami.
 
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Application Launch Instructions:
 
@@ -57,7 +60,7 @@ Once the emulator is running, Expo will automatically recognize the available de
 That's it! 😃  Now you can enjoy the app on your device and create your task list!
 
 
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 Instrukcja uruchomienia aplikacji:
