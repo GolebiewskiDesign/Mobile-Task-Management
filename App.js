@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet,  View,  FlatList, Button,Text, TextInput} from 'react-native';
+import { StyleSheet,  View,  FlatList, Button} from 'react-native';
 import {useState} from "react";
 import TaskInput from './components/TaskInput';
-
+import Task from './components/Task';
 
 
 export default function App() {
@@ -37,21 +37,20 @@ export default function App() {
         <View style={styles.appContainer}>
             <Button title="Add new Goal" color="cyan" onPress={startAddTaskHandler}  />
             <TaskInput taskHandler={addTaskHandler} visible={modalVisible} cancelTask={cancelAddTaskHandler} /> 
-            <View style={styles.goalsContainer}>
+            <View style={styles.tasksContainer}>
               <FlatList 
               data={task} 
-              renderItem={(itemData)=>{
+              renderItem={(taskData)=>{
                 return(
-                <Text>Here will be the Task with {itemData.item.task}</Text>)
+                  <Task text={taskData.item.task} deleteItem={deleteTaskHandler} id={taskData.item.id} />
+                )
               }}
               keyExtractor={(item,index)=>{
                 return item.id;
               }}
               alwaysBounceVertical={false} />
             </View>
-            <View style={styles.footer}>
-                <Text>This is a footer</Text>
-            </View>
+    
       </View>
     </>
   );
@@ -64,7 +63,7 @@ const styles = StyleSheet.create({
     paddingTop:50,
     paddingHoriziontal:50,
   },
-  goalsContainer:
+  tasksContainer:
   {
     flex: 5,
   },
