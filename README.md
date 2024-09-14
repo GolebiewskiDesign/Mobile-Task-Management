@@ -1,4 +1,4 @@
-📝 #Task Management App - React Native
+ # 📝 Task Management App - React Native
 
 
 🇬🇧 
@@ -32,7 +32,7 @@ Do tworzenia i uruchamiania aplikacji podczas rozwoju wykorzystano Expo. Projekt
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-🧾 #Application Launch Instructions:
+ # 🧾 Application Launch Instructions:
 
 To run this React Native application, follow a few installation steps and use the appropriate commands.
 
@@ -47,13 +47,13 @@ Git – Git is used for managing the source code. You can download Git from the 
 
 
        git clone <repository_url>
-#Running the application on a device:
+# Running the application on a device:
 Start the Expo development server: To run the application, type:
 
         expo start
 After starting the development server, you will see a QR code in the terminal or browser. Scan it using the Expo Go app to run the application on your device.
 
-#Running the application on an emulator:
+# Running the application on an emulator:
 Make sure you have an Android emulator (Android Studio) or Xcode (for iOS) installed.
 Once the emulator is running, Expo will automatically recognize the available device and run the application.
 
@@ -63,7 +63,7 @@ That's it! 😃  Now you can enjoy the app on your device and create your task l
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-🧾 #Instrukcja uruchomienia aplikacji:
+ # 🧾 Instrukcja uruchomienia aplikacji:
 
 Aby uruchomić tę aplikację React Native, należy przejść przez kilka kroków instalacyjnych oraz użyć odpowiednich komend.
 
@@ -77,7 +77,7 @@ Aby uruchomić tę aplikację React Native, należy przejść przez kilka krokó
    
               git clone <url_repozytorium>
 
-#Uruchmienie aplikacji na urządzeniu:
+# Uruchmienie aplikacji na urządzeniu:
 1. Uruchom serwer deweloperski Expo: Aby uruchomić aplikację, wpisz:
    
                expo start
@@ -85,7 +85,7 @@ Aby uruchomić tę aplikację React Native, należy przejść przez kilka krokó
 3. Po uruchomieniu serwera deweloperskiego zobaczysz QR kod w terminalu lub przeglądarce. Zeskanuj go w aplikacji Expo Go, aby uruchomić aplikację na swoim urządzeniu.
 
 
-#Uruchmienie aplikacji na emulatorze:
+# Uruchmienie aplikacji na emulatorze:
 1.Upewnij się, że masz zainstalowany emulator Androida (Android Studio) lub Xcode (dla iOS).
 2. Po uruchomieniu emulatora, Expo automatycznie rozpozna dostępne urządzenie i uruchomi aplikację.
 
