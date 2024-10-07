@@ -31,8 +31,8 @@ Do tworzenia i uruchamiania aplikacji podczas rozwoju wykorzystano Expo. Projekt
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-🇬🇧
- # 🧾 Application Launch Instructions:
+
+ # 🧾 🇬🇧 Application Launch Instructions:
 
 To run this React Native application, follow a few installation steps and use the appropriate commands.
 
@@ -62,8 +62,8 @@ That's it! 😃  Now you can enjoy the app on your device and create your task l
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-🇵🇱
- # 🧾 Instrukcja uruchomienia aplikacji:
+
+ # 🧾 🇵🇱 Instrukcja uruchomienia aplikacji:
 
 Aby uruchomić tę aplikację React Native, należy przejść przez kilka kroków instalacyjnych oraz użyć odpowiednich komend.
 
